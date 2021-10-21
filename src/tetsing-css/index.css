@@ -1,0 +1,53 @@
+:root {
+  --primary-color: #232c33;
+  --secondary-color: #4187f6;
+  --primary-font-color: #fff;
+}
+
+.card {
+  position: relative;
+  height: 300px;
+  width: 200px;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-font-color);
+  font-size: 40px;
+  overflow: hidden;
+}
+
+.content {
+  z-index: 1;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  height: 200%;
+  width: 50%;
+  background: linear-gradient(#d400d4, var(--secondary-color));
+  animation: anim 4s linear infinite;
+}
+
+@keyframes anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .card::after {
+  position: absolute;
+  content: '';
+  height: calc(100% - 8px);
+  width: calc(100% - 8px);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+} */

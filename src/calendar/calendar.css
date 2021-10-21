@@ -1,0 +1,98 @@
+:root {
+  --primary-color: #232c33;
+  --secondary-color: #4187f6;
+  --primary-font-color: #fff;
+  --disable-color: gray;
+  --holiday-color: red;
+}
+
+.calendar {
+  background-color: var(--primary-color);
+  color: var(--primary-font-color);
+  width: 390px;
+  padding: 10px;
+}
+
+.calendar-controls {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.calendar__table {
+  width: 100%;
+  user-select: none;
+}
+
+.calendar__th {
+  height: 30px;
+  padding: 3px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.calendar__weekend {
+  color: var(--holiday-color);
+}
+
+.calendar__td {
+  text-align: center;
+  height: 30px;
+  padding: 3px;
+  border: 3px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.calendar__td:not(.calendar__today):hover {
+  background-color: #3f3f44;
+  transition: 0.3s;
+}
+
+.calendar__not-actual {
+  color: var(--disable-color);
+}
+
+.calendar__today {
+  background-color: var(--secondary-color);
+  outline: var(--secondary-color) solid 3px;
+}
+
+.calendar__controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendar__date-controls {
+  display: flex;
+  flex-grow: 1;
+}
+
+.calendar__date-picker {
+  width: 40%;
+  min-width: fit-content;
+  /* margin-right: 1rem; */
+}
+
+.calendar__year-picker {
+  display: flex;
+  align-items: center;
+}
+
+.calendar__change-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70px;
+}
+
+.calendar__change-button {
+  position: relative;
+  cursor: pointer;
+}
+
+.calendar__change-button:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
