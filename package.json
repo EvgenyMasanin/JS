@@ -4,9 +4,10 @@
   "description": "",
   "main": "public/index.html",
   "scripts": {
-    "dev": "parcel public/index.html --open"
+    "dev": "parcel public/index.html --open --port=3000",
+    "build" : "parcel build public/index.html --out-dir=build --public-url ./"
   },
-  "keywords": [],
+  "keywords": ["js", "css", "parcel"],
   "author": "Yauheni_Masanin",
   "license": "ISC",
   "devDependencies": {
